@@ -1,4 +1,4 @@
-// Begin function to create a license badge using user input.
+// Begin function to render a license badge using user input.
 const renderLicenseBadge = license => {
 // If license exists, a license badge is returned depending on what license is passed in.
   if (license) {
@@ -65,6 +65,30 @@ const renderContribution = contribution => {
     return `- [How To Contribute](#how-to-contribute)`;
   } else {
 // If no contribution section exists, return an empty string.
+    return '';
+  }
+};
+
+// Begin function to render the contribution section using user input.
+const renderContributionSection = contribution => {
+  const contributionSection = `## How To Contribution
+  ${contribution}`;
+// If a contribution section exists, create a contribution section.
+  if (contribution) {
+    return contributionSection;
+  } else {
+// If no contribution section exists, return an empty string.
+    return '';
+  }
+};
+
+// Begin function that renders the test section in the table of contents using user input.
+const renderTest = test => {
+// If a test section exists, create a test section in table of contents.
+  if (test) {
+    return `- [Testing](#testing)`;
+  } else {
+// If no test section exists, return an empty string.
     return '';
   }
 };
