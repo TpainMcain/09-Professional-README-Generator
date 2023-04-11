@@ -92,3 +92,16 @@ const renderTest = test => {
     return '';
   }
 };
+
+// Begin function to render the test section.
+const renderTestSection = test => {
+  testSection = `## Tests
+  ${test}`;
+// If a test section exists, create a test section
+  if (test) {
+    return testSection;
+  } else {
+// If no test section exists, return an empty string.
+    return '';
+  }
+};
