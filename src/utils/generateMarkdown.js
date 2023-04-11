@@ -15,7 +15,7 @@ const renderInstallation = installation => {
   if (installation) {
     return `- [Installation Instructions](#installation-instructions)`;
   } else {
-// if no installation section exists, return an empty string.
+// If no installation section exists, return an empty string.
     return '';
   }
 };
@@ -40,6 +40,31 @@ const renderLicense = license => {
     return `- [License Section](#license)`;
   } else {
 // If no license exists, return an empty string.
+    return '';
+  }
+};
+
+// Begin function to render the license section with a link to license information using user input.
+const renderLicenseSection = license => {
+  const licenseSection = `## License
+  Permission to use this application is granted under the ${license} license.
+  Click on the link for more information: [${license} License Information](https://opensource.org/licenses/${license})`;
+// If a license exists, create a link to license information.
+  if (license) {
+    return licenseSection;
+  } else {
+// If no license exists, return an empty string.
+    return '';
+  }
+};
+
+// Begin function to render the contribution section in the table of contents using user input.
+const renderContribution = contribution => {
+// If a contribution section exists, create a contribution section in table of contents.
+  if (contribution) {
+    return `- [How To Contribute](#how-to-contribute)`;
+  } else {
+// If no contribution section exists, return an empty string.
     return '';
   }
 };
