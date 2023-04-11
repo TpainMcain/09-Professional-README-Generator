@@ -1,11 +1,7 @@
-// Require Node.js file system.
-const fs = require('fs');
-// Require Inquirer 8.2.0.
-const inquirer = require('inquirer');
-// Require link to where the README is created.
-const generateMarkdown = require('./utils/generateMarkdown');
-// Declare array of questions for user input.
-const questions = () => {
+const fs = require('fs'); // Require Node.js file system.
+const inquirer = require('inquirer'); // Require Inquirer 8.2.0.
+const generateMarkdown = require('./utils/generateMarkdown'); // Require link to where the README is created.
+const questions = () => { // Declare array of questions for user input. 
 // Prompt the user using inquirer. Use the name parameter value for template literals when writing the README.
     return inquirer.prompt([
       {
@@ -148,8 +144,22 @@ const writeToFile = data => {
       return;
     } else {
 // If successful.
-      console.log('Your README has been successfully created!');
+      console.log('Your README has been created successfully!');
     }
   });
 };
 
+// Begin Function to initialize README generator.
+questions()
+// Get user input.
+  .then(answers => {
+    return generateMarkdown(answers);
+  })
+// Display data on the page.
+  .then(data => {
+    return writeToFile(data);
+  })
+// Catch errors.
+  .catch(err => {
+    console.log(err);
+  });
