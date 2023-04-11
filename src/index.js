@@ -138,3 +138,18 @@ const questions = () => {
     ]);
   };
 
+// Begin function to write README file using file system.
+const writeToFile = data => {
+// writeFile allows you to write a file using three parameters: (name of file, data, callback for errors).
+  fs.writeFile('README.md', data, err => {
+// Check for error.
+    if (err) {
+      console.log(err);
+      return;
+    } else {
+// If successful.
+      console.log('Your README has been successfully created!');
+    }
+  });
+};
+
