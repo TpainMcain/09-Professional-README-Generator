@@ -19,3 +19,25 @@ const renderInstallation = installation => {
     return '';
   }
 };
+
+// Begin function that renders the installation section.
+const renderInstallationSection = installation => {
+  const installationSection = `## Installation Instructions
+  ${installation}`;
+  if (installation) {
+    return installationSection;
+  } else {
+    return '';
+  }
+};
+
+// Begin function that puts license section in table of contents
+const renderLicense = license => {
+  if (license) {
+// if a license exists, create a license section in table of contents
+    return `- [License Section](#license)`;
+  } else {
+// if no license exists, return an empty string
+    return '';
+  }
+};
