@@ -1,20 +1,21 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+// Begin function to create a license badge.
+const renderLicenseBadge = license => {
+// If license exists, a license badge is returned depending on what license is passed in.
+  if (license) {
+    return `![${license} License](https://img.shields.io/badge/license-${license}-important)`;
+  } else {
+// If no license exists, return an empty string.
+    return '';
+  }
+};
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
-}
-
-module.exports = generateMarkdown;
+// Begin function that renders the installation section in the table of contents.
+const renderInstallation = installation => {
+// if an installation section exists, create a installation section in table of contents
+  if (installation) {
+    return `- [Installation Instructions](#installation-instructions)`;
+  } else {
+// if no installation section exists, return an empty string.
+    return '';
+  }
+};
