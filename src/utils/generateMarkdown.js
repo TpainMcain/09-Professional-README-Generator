@@ -105,3 +105,35 @@ const renderTestSection = test => {
     return '';
   }
 };
+
+// Begin function to generate markdown for README.
+const generateMarkdown = data => {
+// Declare data variables.
+const { installation, license, contribution, test } = data;
+// Render README.
+  return `# ${data.title}
+${renderLicenseBadge(data.license)}
+  ## Table of Contents
+  - [Description](#description)
+  ${renderInstallation(installation)}
+  - [Usage Instructions](#usage-instructions)
+  ${renderLicense(license)}
+  ${renderContribution(contribution)}
+  ${renderTest(test)}
+  - [Contact Me](#contact-me)
+  ## Description
+  ${data.description}
+  ${renderInstallationSection(installation)}
+  ## Usage Instructions
+  ${data.usage}
+  ${renderLicenseSection(license)}
+  ${renderContributionSection(contribution)}
+  ${renderTestSection(test)}
+  ## Contact Me
+  GitHub Link: (https://github.com/${data.github})<br>
+  Email Address: <${data.email}>
+`;
+};
+
+// Export module to index.js.
+module.exports = generateMarkdown;
