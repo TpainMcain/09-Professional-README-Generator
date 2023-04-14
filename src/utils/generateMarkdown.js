@@ -106,10 +106,36 @@ const renderTestSection = test => {
   }
 };
 
+// Begin function that renders the credits section in the table of contents using user input.
+const renderCredits = credits => {
+  // If a credits section exists, create a credits section in table of contents.
+    if (credits) {
+      return `- [Credits](#credits)`;
+    } else {
+  // If no credits section exists, return an empty string.
+      return '';
+    }
+  };
+  
+  // Begin function to render the credits section.
+  const renderCreditsSection = credits => {
+    creditsSection = `## Credits
+    ${credits}`;
+  // If a credits section exists, create a test section
+    if (credits) {
+      return creditsSection;
+    } else {
+  // If no credits section exists, return an empty string.
+      return '';
+    }
+  };
+
+
+
 // Begin function to generate markdown for README.
 const generateMarkdown = data => {
 // Declare data variables.
-const { installation, license, contribution, test } = data;
+const { installation, license, contribution, test, credits } = data;
 // Render README.
   return `# ${data.title}
 ${renderLicenseBadge(data.license)}
@@ -120,6 +146,7 @@ ${renderLicenseBadge(data.license)}
   ${renderLicense(license)}
   ${renderContribution(contribution)}
   ${renderTest(test)}
+  ${renderCredits(credits)}
   - [Contact Me](#contact-me)
   ## Description
   ${data.description}
@@ -129,6 +156,7 @@ ${renderLicenseBadge(data.license)}
   ${renderLicenseSection(license)}
   ${renderContributionSection(contribution)}
   ${renderTestSection(test)}
+  ${renderCreditsSection(credits)}
   ## Contact Me
   GitHub Link: (https://github.com/${data.github})<br>
   Email Address: <${data.email}>
