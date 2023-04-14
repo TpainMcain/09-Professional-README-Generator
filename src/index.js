@@ -103,6 +103,20 @@ const questions = () => { // Declare array of questions for user input.
         message: 'Command for running tests:', // Add command for running tests.
         when: ({ confirmTest }) => confirmTest,
       },
+
+      {
+        type: 'confirm',
+        name: 'confirmCredits',
+        message: 'Would you like to add a section for credits?', // Ask to add credits.
+        default: false,
+      },
+  
+      {
+        type: 'input',
+        name: 'credits',
+        message: 'Credits:', // Add credits.
+        when: ({ confirmCredits }) => confirmCredits,
+      },
   
       {
         type: 'input',
