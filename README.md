@@ -6,8 +6,6 @@
   - [Installation Instructions](#installation-instructions)
   - [Usage Instructions](#usage-instructions)
   - [License Section](#license)
-  - [How To Contribute](#how-to-contribute)
-  - [Testing](#testing)
   - [Credits](#credits)
   - [Contact Me](#contact-me)
   
