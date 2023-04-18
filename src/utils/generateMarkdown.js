@@ -71,7 +71,7 @@ const renderContribution = contribution => {
 
 // Begin function to render the contribution section using user input.
 const renderContributionSection = contribution => {
-  const contributionSection = `## How To Contribution
+  const contributionSection = `## How To Contribute
   ${contribution}`;
 // If a contribution section exists, create a contribution section.
   if (contribution) {
@@ -95,7 +95,7 @@ const renderTest = test => {
 
 // Begin function to render the test section.
 const renderTestSection = test => {
-  testSection = `## Tests
+  const testSection = `## Tests
   ${test}`;
 // If a test section exists, create a test section
   if (test) {
@@ -107,9 +107,9 @@ const renderTestSection = test => {
 };
 
 // Begin function that renders the credits section in the table of contents using user input.
-const renderCredits = credits => {
+const renderCredit = credit => {
   // If a credits section exists, create a credits section in table of contents.
-    if (credits) {
+    if (credit) {
       return `- [Credits](#credits)`;
     } else {
   // If no credits section exists, return an empty string.
@@ -118,12 +118,12 @@ const renderCredits = credits => {
   };
   
   // Begin function to render the credits section.
-  const renderCreditsSection = credits => {
-    creditsSection = `## Credits
-    ${credits}`;
-  // If a credits section exists, create a test section
-    if (credits) {
-      return creditsSection;
+  const renderCreditSection = credit => {
+    const creditSection = `## Credits
+    ${credit}`;
+  // If a credits section exists, create a credits section
+    if (credit) {
+      return creditSection;
     } else {
   // If no credits section exists, return an empty string.
       return '';
@@ -135,7 +135,7 @@ const renderCredits = credits => {
 // Begin function to generate markdown for README.
 const generateMarkdown = data => {
 // Declare data variables.
-const { installation, license, contribution, test, credits } = data;
+const { installation, license, contribution, test, credit } = data;
 // Render README.
   return `# ${data.title}
 ${renderLicenseBadge(data.license)}
@@ -146,7 +146,7 @@ ${renderLicenseBadge(data.license)}
   ${renderLicense(license)}
   ${renderContribution(contribution)}
   ${renderTest(test)}
-  ${renderCredits(credits)}
+  ${renderCredit(credit)}
   - [Contact Me](#contact-me)
   ## Description
   ${data.description}
@@ -156,7 +156,7 @@ ${renderLicenseBadge(data.license)}
   ${renderLicenseSection(license)}
   ${renderContributionSection(contribution)}
   ${renderTestSection(test)}
-  ${renderCreditsSection(credits)}
+  ${renderCreditSection(credit)}
   ## Contact Me
   GitHub Link: (https://github.com/${data.github})<br>
   Email Address: <${data.email}>

@@ -106,22 +106,22 @@ const questions = () => { // Declare array of questions for user input.
 
       {
         type: 'confirm',
-        name: 'confirmCredits',
+        name: 'confirmCredit',
         message: 'Would you like to add a section for credits?', // Ask to add credits.
-        default: false,
+        default: true,
       },
   
       {
         type: 'input',
-        name: 'credits',
-        message: 'Credits:', // Add credits.
-        when: ({ confirmCredits }) => confirmCredits,
+        name: 'credit',
+        message: 'Give credit:', // Add credits.
+        when: ({ confirmCredit }) => confirmCredit,
       },
   
       {
         type: 'input',
         name: 'github',
-        message: 'GitHub username: (Required)', // Add github username.
+        message: 'Your GitHub username: (Required)', // Add github username.
         validate: nameInput => {
           if (nameInput) {
             return true;
@@ -135,7 +135,7 @@ const questions = () => { // Declare array of questions for user input.
       {
         type: 'input',
         name: 'email',
-        message: 'Email Address: (Required)', // Add email address.
+        message: 'Your Email Address: (Required)', // Add email address.
         validate: nameInput => {
           if (nameInput) {
             return true;
