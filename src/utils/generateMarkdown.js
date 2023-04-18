@@ -108,28 +108,27 @@ const renderTestSection = test => {
 
 // Begin function that renders the credits section in the table of contents using user input.
 const renderCredit = credit => {
-  // If a credits section exists, create a credits section in table of contents.
+// If a credits section exists, create a credits section in table of contents.
     if (credit) {
       return `- [Credits](#credits)`;
     } else {
-  // If no credits section exists, return an empty string.
+// If no credits section exists, return an empty string.
       return '';
     }
   };
   
-  // Begin function to render the credits section.
-  const renderCreditSection = credit => {
-    const creditSection = `## Credits
-    ${credit}`;
-  // If a credits section exists, create a credits section
-    if (credit) {
-      return creditSection;
-    } else {
-  // If no credits section exists, return an empty string.
-      return '';
-    }
-  };
-
+// Begin function that renders the credits section
+const renderCreditSection = credit => {
+  const creditSection = `## Credits
+  ${credit}`;
+// If a credits section exists, create a credits section
+  if (credit) {
+    return creditSection;
+  } else {
+// If no credits section exists, return an empty string.
+    return '';
+  }
+};
 
 
 // Begin function to generate markdown for README.
