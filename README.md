@@ -1,4 +1,4 @@
-# Professional-README-Generator
+# Professional README Generator
 ![MIT License](https://img.shields.io/badge/license-MIT-important)
 
 ## Table of Contents
