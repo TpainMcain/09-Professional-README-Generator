@@ -18,7 +18,7 @@ This app uses Node.js to create a README.md file. The content is based on respon
   ### Clone the code
   Click on the green code button and copy the link to this repository. Then open your code editor and open the terminal. In the terminal use `cd` to go to the root       directory you want this repository to be cloned to. Finally, in the terminal, type `git clone <file link>`.
   ### Inquirer
-  Inquirer is an npm package instead of being built directly into node.js, you must type `npm init` into the command line to allow npm packages to be installed. Next,   go to the app.js file, and in the command line, type `npm install inquirer` to install Inquirer on your computer. For documentation on Inquirer or other npm           packages, follow this link: https://www.npmjs.com/.
+  Inquirer is an npm package instead of being built directly into node.js, you must type `npm init` into the command line to allow npm packages to be installed. Next,   go to the index.js file, and in the command line, type `npm install inquirer` to install Inquirer on your computer. For documentation on Inquirer or other npm           packages, follow this link: https://www.npmjs.com/.
   
 ## Usage Instructions
 * To create a README, first use `cd` to navigate to the directory that index.js is in.
