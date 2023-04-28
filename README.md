@@ -21,7 +21,7 @@ This app uses Node.js to create a README.md file. The content is based on respon
   Inquirer is an npm package instead of being built directly into node.js, you must type `npm init` into the command line to allow npm packages to be installed. Next,   go to the index.js file, and in the command line, type `npm install inquirer` to install Inquirer on your computer. For documentation on Inquirer or other npm           packages, follow this link: https://www.npmjs.com/.
   
 ## Usage Instructions
-* To create a README, first use `cd` to navigate to the directory that index.js is in.
+* To create a README, open the terminal navigate to the directory that index.js is in.
 * Next, type node index into the command-line and you will be prompted with a series of questions.
 * Respond to the questions and press enter. Repeat this process for the rest of the questions. Pressing enter saves the response and returns the next question. Once the response is saved, you cannot go back and edit it, however, once the README.md file is generated, you can edit the content in your code editor.
 * Once all the questions have been answered, you will be prompted with a message that says "Your README has been successfully created!" in the command line. You can view your new README.md in the explorer tab in your code editor.
